@@ -3,6 +3,8 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, doc, addDoc, query, onSnapshot, serverTimestamp, orderBy, getDoc, setDoc } from 'firebase/firestore';
 import { getAuth, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
 import { MessageSquare, Smile, Heart, Users, Wind, Coffee, Phone, Calendar, AlertTriangle, Loader2, CornerDownRight, Video } from 'lucide-react';
+import logo from './logo.png';
+
 
 // --- Configuração do Firebase ---
 const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
@@ -96,11 +98,12 @@ const Navbar = ({ page, setPage }) => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
                 <div className="flex items-center justify-between h-16 relative z-10">
                     <div className="flex items-center cursor-pointer" onClick={() => setPage('home')}>
-                        <div className="text-4xl font-bold" style={{ fontFamily: "'Caveat', cursive" }}>
-                            <span style={{ color: '#a78bfa' }}>Un</span>
-                            <span style={{ color: '#84cc16' }}>Bem</span>
-                        </div>
-                    </div>
+  <img src={logo} alt="Logo UnBem" className="w-10 h-10 mr-2" />
+  <div className="text-4xl font-bold" style={{ fontFamily: "'Caveat', cursive" }}>
+    <span style={{ color: '#a78bfa' }}>Un</span>
+    <span style={{ color: '#84cc16' }}>Bem</span>
+  </div>
+</div>
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
                             {navItems.map((item) => (
