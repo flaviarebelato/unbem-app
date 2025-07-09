@@ -3,7 +3,6 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, doc, addDoc, query, onSnapshot, serverTimestamp, orderBy, getDoc, setDoc } from 'firebase/firestore';
 import { getAuth, signInAnonymously, onAuthStateChanged } from 'firebase/auth';
 import { MessageSquare, Smile, Heart, Users, Wind, Coffee, Phone, Calendar, AlertTriangle, Loader2, CornerDownRight, Video } from 'lucide-react';
-import logo from './logo.png';
 
 
 // --- Configuração do Firebase ---
